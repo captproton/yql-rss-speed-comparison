@@ -27,6 +27,7 @@
             var content = y.query(q);
             y.log(content.results.rss);
             feed = <feed/>;
+			feed.source = f;
             feed.title = content.results.rss[0].channel.title;
             feed.link = content.results.rss[0].channel.link;
             for each(rss in content.results.rss){
